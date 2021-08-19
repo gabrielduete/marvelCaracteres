@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url('/assets/img/fundo.jpg');
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+#meuHeader{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+#logo{
+    width: 8%;
+    margin-top: 0.50%;
+    text-align: center;
+}
+
+#logo img{
+    width: 80%;
+}
+
+#meuHeader i{
+    cursor: pointer;
+    margin-left: 95%;
+    position: fixed;
+    z-index: 2;
+}
+
+#meuHeader ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    transition: 2s;
+}
+
+#meuHeader li{
+    display: flex;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#meuHeader a{
+    text-decoration: none;
+    color: white;
+    transition: 0.50s;
+}
+
+#meuHeader a:hover{
+    color: #ee2027;
+}
+
+/* Menu de apresentação */
+#apresentacao{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    user-select: none;
+}
+
+#apresentacao img{
+    width: 100%;
+    border-bottom: 2px solid #ee2027;
+}
+
+#apresentacao #divTitulo{
+    margin: auto;
+    margin-top: 23%;
+    width: 100%;
+    position: absolute;
+}
+
+#apresentacao h1{
+    font-size: 5em;
+    margin-left: 8%;
+    color: #ee2027;
+    cursor: pointer;
+}
+#apresentacao p{
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 1.2em;
+}
+
+#apresentacao span{
+    border-top: 10px solid rgb(25, 25, 25);
+    border-bottom: 10px solid rgb(25, 25, 25);
+    color: #ffffff;
+}
+
+h2{
+    text-align: center;
+    color: #ee2027;
+    margin-top: 4%;
+    margin-bottom: 1.5%;
+    font-size: 4em;
+}
+
+/* Footer */
+#meuFooter{
+    margin-top: 3.50%;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meuFooter a {
+    margin-left: 1%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.50s;
+}
+
+#meuFooter a:hover{
+    color: #ee2027;
+}
+
+/* Scroll */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20); 
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #ee2027;
+    border-radius: 20px;
+    border: 1px solid rgb(25, 25, 25);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(37, 32, 32); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ee2027;
+    border-radius: 20px;
+    border: 1px solid rgb(25, 25, 25);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #971a1f; 
+}
+
+/* Jogo */
+#grade{
+    width:  80%;
+    height: auto;
+    margin: 0 auto;
+    border: 3px solid rgb(25, 25, 25);
+}
+
+#divContainer{
+    margin: 2%;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#divContainer img{
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    margin: 0.20%;
+    border: 2px solid #ee2027;
+}
+
+#pontos{
+    font-size: 3.2em;
+}
+
+#final{
+    display: none;
+}
+
+#final p{
+    text-align: center;
+    font-size: 2em;
+    color: black;
+}
+
+#final #relogar{
+    cursor: pointer;
+}
+
+/* Ajustando as divs dos personagens em telas pequenas */
+@media only screen and (max-width: 600px) {
+
+    #apresentacao h1{
+        font-size: 2em;
+    }
+
+    #apresentacao p{
+        font-size: 0.80em;
+    }
+
+    #logo img{
+        width: 200%;
+        margin-left: 10%;
+    }
+
+    #meuHeader li{
+        margin-left: 8%;
+        font-size: 0.60em;
+    }
+
+}
+
+@media (min-width:481px) and (max-width:768px){
+    #apresentacao h1{
+        font-size: 2.8em;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    #meuHeader i{
+        display: none;
+    }
+    
+    #meuHeader ul{
+        display: flex;
+    }
+}

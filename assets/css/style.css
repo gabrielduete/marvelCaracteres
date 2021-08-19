@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url('/assets/img/fundo.jpg');
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+#meuHeader{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+#logo{
+    width: 8%;
+    margin-top: 0.50%;
+    text-align: center;
+}
+
+#logo img{
+    width: 80%;
+}
+
+#meuHeader i{
+    cursor: pointer;
+    margin-left: 95%;
+    position: fixed;
+    z-index: 2;
+}
+
+#meuHeader #botao-2{
+    display: none;
+}
+
+#meuHeader ul{
+    display: none;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    transition: 2s;
+}
+
+#meuHeader li{
+    display: flex;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#meuHeader a{
+    text-decoration: none;
+    color: white;
+    transition: 0.50s;
+}
+
+#meuHeader a:hover{
+    color: #ee2027;
+}
+
+#meuHeader #botao:active, #meuHeader #bota-2:active{
+    color: red;
+}
+
+#meuHeader #bota-2:active{
+    color: red;
+}
+
+/* Search */
+.menuSearch{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3%;
+}
+
+.menuSearch input{
+    background: none;
+    border-style: none;
+    border-bottom: 4px solid rgb(20, 20, 20);
+    padding-left: 0.2px;
+    outline: none;
+}
+
+.menuSearch i{
+    color: #ee2027;
+    background: none;
+}
+
+/* Menu de apresentação */
+#apresentacao{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    user-select: none;
+}
+
+#apresentacao img{
+    width: 100%;
+    border-bottom: 2px solid #ee2027;
+}
+
+#apresentacao #divTitulo{
+    margin: auto;
+    margin-top: 23%;
+    width: 100%;
+    position: absolute;
+}
+
+#apresentacao h1{
+    font-size: 5em;
+    margin-left: 8%;
+    color: #ee2027;
+    cursor: pointer;
+}
+#apresentacao p{
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 1.2em;
+}
+
+#apresentacao span{
+    border-top: 10px solid rgb(25, 25, 25);
+    border-bottom: 10px solid rgb(25, 25, 25);
+    color: #ffffff;
+}
+
+h2{
+    text-align: center;
+    color: #ee2027;
+    margin-top: 4%;
+    margin-bottom: 1.5%;
+    font-size: 4em;
+}
+
+/* Div buscando a api dos herois */
+#meusHerois, #meusQuadrinhos{
+    display: flex;
+    flex-direction: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#meusHerois img, #meusQuadrinhos img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px 0px 30px 0px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.185);
+    border-top: 3px solid #ee2027;
+}
+
+.personagem{
+    margin: 1%;
+    width: 20%;
+    cursor: pointer;
+    border-radius: 20px 0px;
+    transition: 0.50s;
+}
+
+.personagem:hover{
+    transform: scale(1.040);
+}
+
+#meusQuadrinhos img{
+    height: 280px;
+}
+
+/* Footer */
+#meuFooter{
+    margin-top: 3.50%;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meuFooter a {
+    margin-left: 1%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.50s;
+}
+
+#meuFooter a:hover{
+    color: #ee2027;
+}
+
+/* Classes utilizadas para o Search no js */
+.esconder{
+    display : none;
+}
+
+.mostrar{
+    display: block;
+}
+
+.menuNavItens{
+    margin-top: 2%;
+    width: 100%;
+    color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.menuNavItens i{
+    padding: 0px 8px;
+    cursor: pointer;
+    transition: 0.30s;
+}
+
+.menuNavItens #numbers{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menuNavItens a{
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    transition: 0.30s;
+    padding: 0px 8px;
+}
+
+#numbers a:hover, .menuNavItens i:hover{
+    color: #ee2027;
+}
+
+#containerModal, #containerModal-2{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal, #modal-2{
+    width: 60%;
+    height: 60%;
+    min-width: 300px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(25, 25, 25);
+    animation: animate;
+    animation-duration: 800ms;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+#modal p, #modal-2 p{
+    color: #ee2027;
+    position: absolute;
+    top: 20%;
+    flex-basis: 10%;
+    font-size: 1.5em;
+}
+
+#modal img, #modal-2 img{
+    margin-top: 5%;
+    width: 45%;
+    height: 85%;
+    margin-left: 1%;
+    border: 2px solid #ee2027;
+}
+
+@keyframes animate{
+    from{opacity: 1;}
+    from{opacity: 0;}
+}
+
+.desc{
+    font-size: 1em;
+    margin-top: 5%;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1%;
+}
+
+#fechar, #fechar-2{
+    position: absolute;
+    color: #ffffff;
+    top: 19.50%;
+    left: 77.70%;
+    float: right;
+    cursor: pointer;
+    transition: 0.40s;
+}
+
+#fechar:hover, #fechar-2:hover{
+    color: #ee2027;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20); 
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #ee2027;
+    border-radius: 20px;
+    border: 1px solid rgb(25, 25, 25);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(37, 32, 32); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ee2027;
+    border-radius: 20px;
+    border: 1px solid rgb(25, 25, 25);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #971a1f; 
+}
+
+/* Ajustando as divs dos personagens em telas pequenas */
+@media only screen and (max-width: 600px) {
+    .personagem {
+      width: 40%;  
+    }
+
+    #apresentacao h1{
+        font-size: 2em;
+    }
+
+    #apresentacao p{
+        font-size: 0.80em;
+    }
+
+    #logo img{
+        width: 200%;
+        margin-left: 10%;
+    }
+
+    #meuSearch input{
+        width: 50%;
+    }
+
+    #fechar, #fechar-2{
+        display: none;
+    }
+
+    #modal p, #modal-2 p{
+        top: 25%;
+        font-size: 1em;
+    }
+
+    #modal, #modal-2{
+        width: 80%;
+        height: 50%;
+    }
+
+    #meuHeader li{
+        margin-left: 8%;
+        font-size: 0.60em;
+    }
+
+}
+
+@media (min-width:481px) and (max-width:768px){
+    #apresentacao h1{
+        font-size: 2.8em;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    #meuHeader i{
+        display: none;
+    }
+    
+    #meuHeader ul{
+        display: flex;
+    }
+}

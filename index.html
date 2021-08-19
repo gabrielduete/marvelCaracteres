@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>MARVEL CARACATERES</title>
+</head>
+<body>
+
+    <!-- Menu -->
+    <header id = 'meuHeader'>
+        <div id = 'logo'>
+            <img src="assets/img/Marvel_Logo.svg.png" alt="marvel_Logo">
+        </div>
+        
+        <ul id = 'minhaUl'>
+            <li><a href = "#apresentacao">Início</a></li>
+            <li><a href= "#characters">Caracteres</a></li>
+            <li><a href="#quadrinhos">Quadrinhos</a></li>
+            <li><a href="jogoMemoria.html">Jogo da Memória</a></li>
+        </ul>
+        <i class="fas fa-times" id = 'botao-2'></i>
+        <i class="fas fa-bars" id = 'botao'></i>
+
+    </header>
+
+    <!-- Parte da apresentação -->
+    <div id = 'apresentacao'>
+        <div id = 'divTitulo'>
+            <h1>MARVEL <span>CARACATERES</span></h1>
+            <p>Conheça os quadrinhos e caracteres da API da Marvel!</p>
+        </div>
+        
+        <img src="assets/img/wallpaperflare.com_wallpaper.jpg" alt="fundo_Marvel">
+    </div>
+
+    <!-- Heróis -->
+    <h2 id = 'characters'>CARACATERES</h2>
+
+    <form class = 'menuSearch'>
+        <input type="text" name="search" id="search" placeholder="Faça sua Busca" required>
+        <i class= "fas fa-search fa-1x"></i>
+    </form>
+
+    <div id = 'meusHerois'></div>
+
+    <nav class = 'menuNavItens'>
+        <a href="#characters"><i class="fas fa-angle-double-left" id = 'voltar'></i></a>
+        <div id="numbers">
+            <div><a href= "#characters" id = 'pag1'>1</a></div>
+            <div><a href= "#characters" id = 'pag2'>2</a></div>
+        </div>
+        <a href="#characters"><i class= "fas fa-angle-double-right" id = 'prox'></i></a>
+    </nav>
+
+    <!-- Quadrinhos -->
+    <h2 id = 'quadrinhos'>QUADRINHOS</h2>
+
+    <form class = 'menuSearch'>
+        <input type="text" name="search" id="search1" placeholder="Faça sua Busca" required>
+        <i class= "fas fa-search fa-1x"></i>
+    </form>
+
+    <div id="meusQuadrinhos"></div>
+
+    <nav class = 'menuNavItens'>
+        <a href="#quadrinhos"><i class="fas fa-angle-double-left" id = 'voltar2'></i></a>
+        <div id="numbers">
+            <div><a href= "#quadrinhos" id = 'pag1-2'>1</a></div>
+            <div><a href= "#quadrinhos" id = 'pag2-2'>2</a></div>
+        </div>
+        <a href="#quadrinhos"><i class= "fas fa-angle-double-right" id = 'prox2'></i></a>
+    </nav>
+
+    <footer id = 'meuFooter'>
+        <p>@Gabriel Duete - </p>
+        <a href="https://www.linkedin.com/in/gabrielduete/" target="_blank"><i class= 'fab fa-linkedin-in fa-lg'></i></a>
+        <a href="https://github.com/gabrielduete" target="_blank"><i class= 'fab fa-github fa-lg'></i></a>
+    </footer>
+    
+    <div id = 'containerModal'>
+        <div id = 'modal'>
+            <div id = 'fechar'>
+                <i class="fas fa-window-close fa-2x"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id = 'containerModal-2'>
+        <div id = 'modal-2'>
+            <div id = 'fechar-2'>
+                <i class="fas fa-window-close fa-2x"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
