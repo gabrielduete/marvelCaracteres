@@ -1,7 +1,7 @@
 // Definindo minhas variáveis com as keys da API
-const timeStamp = '1626409114'
-const keyPublica = '0b7d24dd8212889e0da98f3b885629de'
-const md5 = 'ba0d083bc1d91e1cedf20bc0cbedc150'
+const timeStamp = ''
+const keyPublica = ''
+const md5 = ''
 
 // Arrys utilizados nas funções de Search
 var arrayNomes = []
@@ -10,7 +10,7 @@ var arrayTitulos = []
 var arrayDivsQuadrinhos = []
 
 // Utilizando o fetch para fazer a chmada da API + o then para ter o retorno do meu objeto JSON
-fetch(`http://gateway.marvel.com/v1/public/characters?limit=40&ts=${timeStamp}&apikey=${keyPublica}&hash=${md5}`
+fetch(`BOTA SEU TOKEN DA API AQUI`
     ).then((response) => {
         return response.json();        
     }).then((jsonParsed) => {
@@ -25,7 +25,7 @@ fetch(`http://gateway.marvel.com/v1/public/characters?limit=40&ts=${timeStamp}&a
 })
 
 // Pegando os quadrinhos da API
-fetch(`http://gateway.marvel.com/v1/public/comics?limit=40&ts=${timeStamp}&apikey=${keyPublica}&hash=${md5}`
+fetch(`BOTA SEU TOKEN DA API AQUI`
     ).then((response) => {
         return response.json();        
     }).then((jsonParsed) => {
