@@ -1,7 +1,7 @@
 // Definindo minhas variáveis com as keys da API
-const timeStamp = '1626409114'
-const keyPublica = '0b7d24dd8212889e0da98f3b885629de'
-const md5 = 'ba0d083bc1d91e1cedf20bc0cbedc150'
+const timeStamp = ''
+const keyPublica = ''
+const md5 = ''
 
 const arrayImagens1 = []
 const arrayImagens2 = []
@@ -12,7 +12,7 @@ var clicou2 = false
 var pontos = 0
 
 // Utilizando o fetch para fazer a chmada da API + o then para ter o retorno do meu objeto JSON
-fetch(`http://gateway.marvel.com/v1/public/characters?limit=10&ts=${timeStamp}&apikey=${keyPublica}&hash=${md5}`
+fetch(`BOTE SEU TOKEN DA API AQUI (LIMITE O USO DE CARACTERES A 20)`
     ).then((response) => {
         return response.json();        
     }).then((jsonParsed) => {
