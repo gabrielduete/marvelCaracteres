@@ -14,6 +14,6 @@ Marvel Caracteres é um site onde mostra os personagens e quadrinhos retornados 
 
 # 😮 Preview
 
-Para visualizar acesse aqui: https://youtu.be/p0bFgVNg6E0 or https://www.linkedin.com/posts/gabrielduete_javascript-css-html-activity-6834209505002176512-joL0
+Para visualizar acesse aqui: [Vídeo no Youtube](https://youtu.be/p0bFgVNg6E0) ou [Post no Linkedin](https://www.linkedin.com/posts/gabrielduete_javascript-css-html-activity-6834209505002176512-joL0)
 
 
