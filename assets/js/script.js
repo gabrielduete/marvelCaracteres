@@ -10,7 +10,7 @@ var arrayTitulos = []
 var arrayDivsQuadrinhos = []
 
 // Utilizando o fetch para fazer a chmada da API + o then para ter o retorno do meu objeto JSON
-fetch(`BOTA SEU TOKEN DA API AQUI`
+fetch(`BOTA SEU TOKEN DA API AQUI(LIMITE OS CARACTERES E QUADRINHOS A 40)`
     ).then((response) => {
         return response.json();        
     }).then((jsonParsed) => {
